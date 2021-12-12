@@ -1,0 +1,256 @@
+:root{
+    --violet : rgb(194, 32, 159);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+html{
+scroll-behavior: smooth;
+width: 100%;
+height: 100%;
+}
+
+/* ------- Header Styling  ------- */
+header{
+    color:white;
+    width: 100%;
+    position: absolute;
+    height: 10vh;
+    z-index: 1000;
+}
+
+header .container{
+    width : 80%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size:3rem;
+    width: 50%;
+    text-transform: capitalize;
+    padding-top:30px;
+    float: left;
+}
+ header nav {
+    float: left;
+} 
+
+header nav>.nav-linkks{
+    list-style: none;
+    margin-top: 10px;
+}
+header nav>.nav-linkks li  {
+    display: inline-block;   
+}
+
+header nav>.nav-linkks li .nav-link {
+    display:block;
+    padding: 40px;
+}
+
+header nav>.nav-linkks li .nav-link.active:after,
+header nav>.nav-linkks li .nav-link:after  {
+    content: "";
+    height:3px;
+    width: 0;
+    display: block;
+    margin-top: 15px;
+    transition: width 0.5s ease-in-out;
+    background-color:var(--violet);
+}
+
+header nav>.nav-linkks li .nav-link.active:after{
+   width: 100%;
+}
+header nav>.nav-linkks li .nav-link:hover:after  {
+   width: 100%;
+}
+
+.clear{
+clear: both;
+}
+a{
+    text-decoration: none;
+    color:white
+
+}
+
+.nav-link:hover,.dropdown a:hover{
+    color: var(--violet);
+}
+
+/* ------- Main Styling  ------- */
+
+main{
+    font-family: 'Sacramento', cursive;
+    background-image: url('../images/img1.jpg');
+    height: 100vh;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+main .overlay{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 800px;
+    height: 710px;
+    border-radius: 15px;
+    background-color: rgb(221, 221, 221,0.6);
+    -webkit-transform:translate(-50%);
+    -moz-transform:translate(-50%);
+    -ms-transform:translate(-50%);
+    -o-transform:translate(-50%);
+}
+
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:700px;
+    height:650px;
+    background-size: cover;
+    background-image: url(../images/welcome.png);
+}
+
+button{
+ display: block;
+ position: absolute;
+ background-color: var(--violet);
+ top:102%;
+ left:35%;
+ border-radius: 15px;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 28px;
+ padding: 20px;
+ width: 30%;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+
+}
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+}
+button:hover span {
+    padding-right: 20px;
+  }
+  
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  .sub-menu-l {
+display:none;
+position: absolute;
+}
+ 
+.dropdown:hover .sub-menu-l{
+    display: block;
+    padding:25px;
+    color: var(--violet);
+    margin-top: 15px;
+    background-color: rgb(243, 234, 234,0.6);
+}
+
+
+
+/* ---------Boats section styling ----------- */
+
+/* parent div */
+.boat-section {
+    width: 100%;
+    height: 100vh;
+    margin:0  auto;
+    padding: 5vh;
+}
+
+.boat-section-content{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.boat-section-content-down{
+    left: 50;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.boat-section-content-top{
+    z-index: 100;
+    width: 50%;
+    height: 90%;
+    float: left;
+    text-align: center;
+    border-radius: 35px;
+    text-align: left;
+
+}
+.boat-section-content-top-title{
+    display: inline-block;
+    padding:60px;
+    color: rgb(32, 131, 123);
+    font-size:4rem;
+}
+.boat-section-content-top-paragraph{
+  padding: 50px;
+  font-size:1.5rem;
+}
+.boat-section-content-top-icons li{
+    list-style: none;
+    display: inline-block;
+    padding:10px;
+}
+
+i{
+    color:black;
+}
+.boat-section-content-top-icons p{
+    color:black;
+}
+
+.boat-section-content-top-icons .icon{
+    text-align: center;
+    display: block;
+    font-size:1.5rem;
+    padding:2.5rem;
+}
+
+
+.image img{
+background-size:cover;
+background-position: center;
+height: 100%;
+width: 100%;
+
+}
